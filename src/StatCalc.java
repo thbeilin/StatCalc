@@ -11,7 +11,11 @@ public class StatCalc {
         return (float) totalBases / atBats;
     }
 
-    public static float OPSCalc(int hits, int totalBases, int atBats) {
-        return AVGCalc(hits, atBats) + SLGCalc(totalBases, atBats);
+    public static float OBPCalc(int timesOnBase, int plateAppearances){
+        return (float) timesOnBase/plateAppearances;
+    }
+
+    public static float OPSCalc(int timesOnBase, int totalBases, int atBats, int plateAppearances) {
+        return OBPCalc(timesOnBase, plateAppearances) + SLGCalc(totalBases, atBats);
     }
 }

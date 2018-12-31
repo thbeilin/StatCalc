@@ -16,8 +16,8 @@ public class StatCalcTest {
     }
     @Test
     public void OPSCalcTest(){
-        int atBats = 9, hits = 3, totalBases = 5;
-        float ops = StatCalc.OPSCalc(hits,totalBases, atBats);
+        int atBats = 9, timesOnBase = 3, plateAppearances = 9, totalBases = 5;
+        float ops = StatCalc.OPSCalc(timesOnBase, totalBases, atBats, plateAppearances);
         assertEquals(ops, (float)1/3+(float)5/9);
     }
 }
